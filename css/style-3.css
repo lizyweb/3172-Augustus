@@ -1,0 +1,670 @@
+:root {
+    --brand: #EA2126;
+    --sub: #02512B;
+    --body: #516171;
+    --border: rgba(0,0,0,0.08);
+    --shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.topbar {
+    background-color:#2C3394;
+}
+/* =================================================== */
+/*** Carousel Hero Header Start ***/
+.header-carousel {
+    position: relative; 
+  }
+  
+  .header-carousel .owl-nav .owl-prev {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: var(--brand);
+    color: var(--bs-white);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+  }
+  
+  .header-carousel .owl-nav .owl-next {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: var(--brand);
+    color: var(--bs-white);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+  }
+  
+  .header-carousel .owl-nav .owl-prev,
+  .header-carousel .owl-nav .owl-next {
+    transition: 0.5s;
+  }
+  
+  .header-carousel .owl-nav .owl-prev:hover,
+  .header-carousel .owl-nav .owl-next:hover {
+    box-shadow: inset 150px 0 0 0 var(--bs-light) !important;
+    color: var(--brand) !important;
+  }
+  
+  @media (max-width: 576px) {
+    .header-carousel .owl-nav .owl-prev,
+    .header-carousel .owl-nav .owl-next {
+        top: 630px;
+        transition: 0.5s;
+    }
+  
+    .header-carousel .header-carousel-item .carousel-caption .carousel-caption-content {
+        width: 95% !important;
+    }
+  
+  }
+  
+  .header-carousel .header-carousel-item,
+  .header-carousel .header-carousel-item img {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    /* margin-top: 95px; */
+    display: block;
+    object-fit: cover;
+    transition: 0.5s;
+  
+  }
+  
+  .header-carousel .header-carousel-item .carousel-caption h2{
+    /* color: #F9E400; */
+    color:rgb(32, 255, 32);
+    font-weight: 600;
+    font-family: Foobar Pro;
+  }
+
+  
+  @media (max-width: 992px) {
+    .header-carousel .header-carousel-item,
+    .header-carousel .header-carousel-item img {
+        margin-top: 0;
+        transition: 0.5s;
+    }
+  
+  }
+  
+  @media (min-width: 992px) {
+    .header-carousel .owl-nav .owl-prev,
+    .header-carousel .owl-nav .owl-next {
+        margin-top: 50px;
+    }
+  }
+  
+  .header-carousel .header-carousel-item .carousel-caption {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .5);
+  }
+  
+  .header-carousel .header-carousel-item .carousel-caption .carousel-caption-content {
+    position: relative;
+    width: 75%;
+    
+  }
+  /*** Carousel Hero Header End ***/
+
+
+/*** Section Title ***/
+/* .section-title::before {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background: var(--sub);
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    bottom: 0;
+    left: 50px;
+    background: var(--sub);
+}
+
+.section-title.text-center::before {
+    left: 50%;
+    margin-left: -25px;
+}
+
+.section-title.text-center::after {
+    left: 50%;
+    margin-left: 25px;
+} */
+
+@keyframes alternateMoveBefore {
+    0%, 100% {
+        top: 2px;
+        left: 0;
+    }
+    50% {
+        top: 5px;
+        left: 3px;
+    }
+}
+
+@keyframes alternateMoveAfter {
+    0%, 100% {
+        top: 5px;
+        left: 3px;
+    }
+    50% {
+        top: 2px;
+        left: 0;
+    }
+}
+
+.section-title h6::before,
+.section-title h6::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: rgba(33, 66, 177, 0.5);
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.section-title h6::before {
+    animation-name: alternateMoveBefore;
+}
+
+.section-title h6::after {
+    animation-name: alternateMoveAfter;
+}
+ /* process start  */
+ 
+#features {
+    padding-top: 50px;
+  }
+  
+  .features .features-content {
+    z-index: 2;
+    position: relative;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  }
+  
+  .features-item {
+    text-align: center;
+    padding: 30px;
+    border-radius: 50px;
+    background: rgb(255,255,255);
+    background: linear-gradient(105deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    transition: background-color .5s;
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    -moz-transition: background-color .5s;
+  }
+  
+  .features-item:hover {
+    /* background: rgb(234,33,38); */
+    background: linear-gradient(70deg, #493D9E 0%, #B2A5FF 100%);
+    box-shadow: 0px 6px 15px #DAD2FF;
+  }
+  .features-item:hover .icon i {
+  color: white;
+  }
+  
+  .features-item:hover h4 {
+    color: #fff;
+  }
+  
+  .features-item:hover p {
+    color: #fff;
+  }
+  
+  .features-item:hover .line-dec {
+    background-color: rgba(255,255,255,0.3);
+  }
+  
+  
+  
+  .features-item .number h6 {
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 69px;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 69px;
+    margin-top: -65px;
+    margin-bottom: 30px;
+  }
+  .features-item .number h6 {
+  width: 120px;
+  height: 80px;
+  background: red;
+  position: relative;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;}
+
+  .features-item .number h6:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 26px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid red;
+    border-bottom: 13px solid transparent;
+  }
+
+  .features-item .first-number h6 {
+ 
+    background: red;
+  }
+  .features-item .first-number:before {
+    border-color:  red;
+    
+  }
+  
+  .features-item .second-number h6 {
+    
+    background: var(--sub);
+  }
+  
+  .features-item .second-number h6:before {
+    border-right: 26px solid var(--sub);
+    
+  }
+  
+  .features-item .third-number h6 {
+    
+    background: rgb(0, 43, 130);
+  }
+  .features-item .third-number h6:before {
+    border-right: 26px solid rgb(0, 43, 130);
+    
+  }
+  
+  .features-item .fourth-number h6 {
+   
+    background:   rgb(227, 0, 227);
+  }
+  .features-item .fourth-number h6:before {
+ 
+    border-right: 26px solid rgb(227, 0, 227);
+  }
+  
+  
+  
+  .features-item .icon i {
+  font-size: 60px;
+    margin: 0 auto;
+    transition: all 0.5s;
+  }
+  
+  .features-item h4 {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #2a2a2a;
+    position: relative;
+    transition: all 0.5s;
+  }
+  
+  .features-item .line-dec {
+    width: 100px;
+    height: 2px;
+    background-color:red;
+    margin: 30px auto;
+    transition: all 0.5s;
+  }
+  
+  .features-item p {
+    position: relative;
+    margin-top: 0px;
+    transition: all 0.5s;
+  }
+  /* ================================================================================== */
+  /*** Service ***/
+  .service-item-07 {
+    position: relative;
+    height: 400px;
+    padding: 30px 25px;
+    background: #FFFFFF;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+    border-radius: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.service-item-07:hover {
+    background: #00879E;
+}
+
+.service-item-07 .service-img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.service-item-07 h5{
+    margin-top: 20px;
+}
+
+.service-item-07 h5,
+.service-item-07 p {
+    transition: .5s;
+}
+
+.service-item-07:hover h5,
+.service-item-07:hover p {
+    color: white;
+}
+
+.service-item-07 a.btn {
+    position: relative;
+    display: flex;
+    color: var(--brand);
+    transition: .5s;
+    z-index: 1;
+}
+
+.service-item-07:hover a.btn {
+    color: var(--brand);
+}
+
+.service-item-07 a.btn::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    border-radius: 35px;
+    background: #DDDDDD;
+    transition: .5s;
+    z-index: -1;
+}
+
+.service-item-07:hover a.btn::before {
+    width: 100%;
+    background: white;
+}
+/* counter start 
+ */
+ .counter {
+	padding-bottom: 70px;
+}
+
+.counter .counter__content {
+	border: none;
+	padding-top: 0;
+	margin-top: 0;
+}
+
+.counter .counter__item .counter__item__text h5 {
+	color: #ffffff;
+}
+
+.counter__content {
+	border-top: 1px solid rgba(183, 183, 183, 0.2);
+	padding-top: 70px;
+	margin-top: 40px;
+}
+
+.counter__item {
+	margin-bottom: 30px;
+}
+
+.counter__item__number {
+	float: left;
+	margin-right: 20px;
+}
+
+.counter__item__number h2 {
+	color: var(--brand);
+	font-size: 60px;
+	line-height: 52px;
+}
+
+.counter__item__text {
+	overflow: hidden;
+}
+
+.counter__item__text h5 {
+	color: #111111;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+.counter-fluid{
+    background-color: #DDDDDD;
+
+}
+
+/* why choose us  */
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+    width: 100%;
+    min-height: 70vh;
+    position: relative;
+    padding: 120px 0 120px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero .hero-bg {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .hero:before {
+    content: "";
+    background: color-mix(in srgb, #003092, transparent 30%);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+  
+  .hero .container {
+    position: relative;
+    z-index: 3;
+  }
+  
+  .hero h1 {
+    margin: 0 0 20px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #FFAB5B;
+  }
+  
+ 
+  
+  .hero p {
+    color: white;;
+    margin: 5px 0 30px 0;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  
+  .hero .btn-get-started {
+    color: white;
+    background: green;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 12px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero .btn-get-started:hover {
+    color: green;
+    background: white;
+    border: 2px solid green;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero .btn-watch-video {
+    font-size: 16px;
+    transition: 0.5s;
+    margin-left: 25px;
+    color: var(--default-color);
+    font-weight: 600;
+  }
+  
+  .hero .btn-watch-video i {
+    color: blue;
+    font-size: 32px;
+    transition: 0.3s;
+    line-height: 0;
+    margin-right: 8px;
+  }
+  
+  
+  
+  .hero .btn-watch-video:hover i {
+    color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  }
+  
+  .hero .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  }
+  
+  @media (max-width: 640px) {
+    .hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  
+    .hero p {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  
+    .hero .btn-get-started,
+    .hero .btn-watch-video {
+      font-size: 13px;
+    }
+  }
+  
+  .hero .hero-waves {
+    display: block;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+  }
+  
+  .hero .wave1 use {
+    animation: move-forever1 10s linear infinite;
+    animation-delay: -2s;
+    fill: white;
+    opacity: 0.6;
+  }
+  
+  .hero .wave2 use {
+    animation: move-forever2 8s linear infinite;
+    animation-delay: -2s;
+    fill: white;
+    opacity: 0.4;
+  }
+  
+  .hero .wave3 use {
+    animation: move-forever3 6s linear infinite;
+    animation-delay: -2s;
+    fill: white;
+  }
+  
+  @keyframes move-forever1 {
+    0% {
+      transform: translate(85px, 0%);
+    }
+  
+    100% {
+      transform: translate(-90px, 0%);
+    }
+  }
+  
+  @keyframes move-forever2 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+  
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  
+  @keyframes move-forever3 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+  
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  
+  @keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+  
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  .hero-point p{
+    font-size: 16px;
+  }
+  
